@@ -9,10 +9,12 @@ This is the development of a collaborative activity for the Computer and Systems
  1. Clone the repository
  2. Open the project in VSCode
  3. Open the `src` folder
- 4. Open the `project` package
+ 4. Open the `interfaces` package
  5. Open the each file
  6. Click on the `Run` button
 ## Members of the team
 
  + Bibian Jinnary Corredor Corredor
  + Eimy Xiomara Ricaurte García
+
+[Contributors](https://github.com/BianesCo/TeamE_CollaborativeWorkshop/pulse)
