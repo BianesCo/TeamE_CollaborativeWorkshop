@@ -67,9 +67,18 @@ public class Menu {
 				JOptionPane.showMessageDialog(null,"----- ERROR -----");
 			}
 			break;
-		case 'Y':
+		case 'Y': exit();
 		}
 	} while (true);
+		
+	}
+
+	private static void exit() {
+		// TODO Auto-generated method stub
+		int option = JOptionPane.showConfirmDialog(null, "ARE YOU SURE"," EXIT", JOptionPane.YES_NO_OPTION);
+		if (option == JOptionPane.YES_OPTION) {
+			System.exit(0);
+		}
 		
 	}
 
