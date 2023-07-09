@@ -2,7 +2,6 @@ package interfaces;
 
 import javax.swing.JOptionPane;
 
-import logic.methods;
 
 public class EgoNumbers {
 
@@ -18,14 +17,29 @@ public class EgoNumbers {
 		
 
 	}
-
 	private static void validateNumber() {
 		// TODO Auto-generated method stub}
 		String number = JOptionPane.showInputDialog(" Enter Number");
-		JOptionPane.showMessageDialog(null,"the number "+number+" is " + methods.egotistical(number));
-		
+		JOptionPane.showMessageDialog(null,"the number " + number +" is " + egotistical(number));
+			
+	}
+	  public static boolean egotistical(String num) {
+			int addition = 0;
+			int n = Integer.parseInt(num);
+			for (int i = 0; i < num.length(); i++) {
+				int base = Character.getNumericValue(num.charAt(i));
+				double exponent = Math.pow(base,num.length());
+				
+				addition += exponent;
+			}
+			if (addition == n) {
+				return true;
+			}else {
+				return false;
+			}
+		}
+
 		
 		
 	}
 
-}
