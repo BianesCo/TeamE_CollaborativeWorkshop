@@ -3,12 +3,18 @@ package main;
 import javax.swing.JOptionPane;
 
 import interfaces.CousinsFactors;
+import interfaces.EgoNumbers;
 
 public class Menu {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		mainMenu();
+		try {
+			mainMenu();
+			
+		} catch (NullPointerException e) {
+			e.getMessage();
+		}
 
 	}
 
@@ -40,6 +46,14 @@ public class Menu {
 		case '3':
 			break;
 		case '4':
+			try {
+				validateNumber();
+				
+			} catch (NumberFormatException e) {
+				// TODO: handle exception
+			JOptionPane.showMessageDialog(null,"----- ERROR -----");
+			}	
+			
 			break;
 		case '5':
 			break;
@@ -48,6 +62,13 @@ public class Menu {
 		case 'Y':
 		}
 	} while (true);
+		
+	}
+
+	private static void validateNumber() {
+		// TODO Auto-generated method stub}
+				String number = JOptionPane.showInputDialog(" Enter Number");
+				JOptionPane.showMessageDialog(null,"the number " + number +" is " + EgoNumbers.egotistical(number));
 		
 	}
 
