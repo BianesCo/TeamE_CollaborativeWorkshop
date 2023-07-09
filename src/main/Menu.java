@@ -3,6 +3,7 @@ package main;
 import javax.swing.JOptionPane;
 
 import interfaces.CousinsFactors;
+import interfaces.Dates;
 import interfaces.EgoNumbers;
 
 public class Menu {
@@ -58,11 +59,32 @@ public class Menu {
 		case '5':
 			break;
 		case '6':
+			try {
+				validateDate();
+				
+			} catch (NumberFormatException e) {
+				// TODO: handle exception
+				JOptionPane.showMessageDialog(null,"----- ERROR -----");
+			}
 			break;
 		case 'Y':
 		}
 	} while (true);
 		
+	}
+
+	private static void validateDate() {
+		// TODO Auto-generated method stub
+		try {
+			String data = JOptionPane.showInputDialog("Enter date in dd/mm/aaaa format ");
+			JOptionPane.showMessageDialog(null, Dates.dates(data));
+			
+		} catch (ArrayIndexOutOfBoundsException e) {
+			// TODO: handle exception
+			JOptionPane.showMessageDialog(null,"----- ERROR -----");
+		}
+		
+
 	}
 
 	private static void validateNumber() {

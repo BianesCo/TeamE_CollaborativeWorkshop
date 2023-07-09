@@ -1,41 +1,16 @@
 package interfaces;
 
 import java.util.Calendar;
+
 import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.Locale;
 
-import javax.swing.JOptionPane;
 
 public class Dates {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-try {
-			
-			validateDate();
-			
-		} catch (NumberFormatException e) {
-			// TODO: handle exception
-			JOptionPane.showMessageDialog(null,"----- ERROR -----");
-		}
-		
-	}
-
-	private static void validateDate() {
-		// TODO Auto-generated method stub
-		try {
-			String data = JOptionPane.showInputDialog("Enter date in dd/mm/aaaa format ");
-			JOptionPane.showMessageDialog(null, dates(data));
-			
-		} catch (ArrayIndexOutOfBoundsException e) {
-			// TODO: handle exception
-			JOptionPane.showMessageDialog(null,"----- ERROR -----");
-		}
-		
-
-	}
+	
 	public static String dates(String data) {
+		
 		String[] datas = data.split("/");
 		String dat1 = datas[0];
 		String dat2 = datas[1];
